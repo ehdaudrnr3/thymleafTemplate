@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th rowspan="2">#</th>
+                    <th rowspan="2">이름</th>
+                    <th rowspan="2">나이</th>
+                    <th rowspan="2">주소</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="member : ${members}">
+                    <td th:text="${member.id}"></td>
+                    <td th:text="${member.name}"></td>
+                    <td th:text="${member.age}"></td>
+                    <td th:text="${member.address}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
